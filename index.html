@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON/OFF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .bulb-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: gray;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 18px;
+            color: aqua;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: red;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bulb-container">
+        <img id="bulb" src="https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940208oq66nq8jew.png" alt="Bulb">
+    </div>
+    
+    <div class="buttons">
+        <button onclick="toggleBulb(true)">💡 Turn ON</button>
+        <button onclick="toggleBulb(false)">🔌 Turn OFF</button>
+    </div>
+
+    <script>
+        function toggleBulb(state) {
+            let bulb = document.getElementById("bulb");
+            bulb.style.opacity = "0.5"; // Smooth effect
+
+            setTimeout(() => {
+                bulb.src = state 
+                    ? "https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940319kdxsp3rf0i.png" 
+                    : "https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940208oq66nq8jew.png";
+                bulb.style.opacity = "1";
+            }, 200);
+        }
+    </script>
+
+</body>
+</html>

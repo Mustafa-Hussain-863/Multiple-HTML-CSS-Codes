@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JQuery.HTML</title>
+</head>
+<style> 
+    #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+    </style>
+<body>
+    <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="Toggle">Toggle</button>
+
+    <hr>
+    <br>
+    <hr>
+
+    <div id="flip">You Know Who is great?</div>
+    <div id="panel">Off course Allah is the Great</div>
+
+    <hr>
+    <br>
+    <hr>
+    
+    <button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+    $("#hide").click(function(){
+        $("p").hide();
+      });
+      
+      $("#show").click(function(){
+        $("p").show();
+      });
+
+      $("#Toggle").click(function(){
+        $("p").toggle();
+      });
+    });
+    $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+
+      $(document).ready(function(){
+        $("button").click(function(){
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle("slow");
+          $("#div3").fadeToggle(3000);
+        });
+      });
+</script>
+</body>
+</html>

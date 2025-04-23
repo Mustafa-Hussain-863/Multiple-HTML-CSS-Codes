@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<style>
+    *{
+        margin: 20px;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+        background-color: aqua;
+        position: relative;
+        text-align: center;
+        padding-top: 70px;
+        color: black;
+    }
+</style>
+<body>
+
+    <div>JQuery</div> 
+
+    <button id="btn">Click Me For animate</button>
+
+    <br><hr><br>
+
+    <p>Sentence "1"</p>
+    <p>Sentence "2"</p>
+
+    <ol>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </ol>
+    <button id="btn1">Append Sentence</button>
+    <button id="btn2">Append List</button>
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $("div").animate({left: '250px', width: '200px',
+            height: '200px',
+            opacity:"1.5",
+        });
+          }); 
+    });
+
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("p").append("<b>Appended Sentence 1+1</b>");
+          });
+    });
+
+    $(document).ready(function(){
+        $("#btn2").click(function(){
+            $("ol").append("<li>Appended List 1+1</li>");
+          });
+    });
+</script>
+</body>
+</html>
